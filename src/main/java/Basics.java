@@ -101,7 +101,7 @@ public class Basics {
          */
         for (int j = 10; j >= 0; j = j - 1)
         {
-            System.out.println(j);
+            System.out.println("Current count: " + j);
         }
     }
 
@@ -142,7 +142,7 @@ public class Basics {
          *                separated by spaces, so no loops are required, though
          *                you may use them if you wish.
          */
-        String input = new String("A Builder Can Destroy Eat Fossil Good");
+        String input = to_split;
 
         // Fill in the rest of the body here
 
@@ -188,7 +188,7 @@ public class Basics {
                 return 0;
             }else {
                 int i;
-                for (i = 0; i < arr.length; i = i + 2) {
+                for (i = 1; i < arr.length; i = i + 2) {
                     current_sum = current_sum + arr[i];
                 }
         }
