@@ -43,7 +43,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
-
+        System.out.println("Hello World!");
 
 
         /* 4. In Python, we could declare variables using a simple assignment
@@ -62,7 +62,7 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
-
+        int my_variable = 100;
 
 
         /* Do not remove the line below: if you did task 2 correctly, then
@@ -99,8 +99,10 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
-
-
+        for (int j = 10; j >= 0; j = j - 1)
+        {
+            System.out.println(j);
+        }
     }
 
     /**
@@ -140,12 +142,24 @@ public class Basics {
          *                separated by spaces, so no loops are required, though
          *                you may use them if you wish.
          */
-        StringBuilder ret = new StringBuilder();
+        String input = new String("A Builder Can Destroy Eat Fossil Good");
 
         // Fill in the rest of the body here
 
+        String[] s;
+        s = input.split(" ");
+
+        String ret = new String("");
+
+        int i;
+        for (i=0; i< s.length; i ++) {
+            char c = s[i].charAt(0);
+            ret = ret + c; }
         return ret.toString();
     }
+
+        // 1. StringBuilder instead of String
+        // 2. Create a new String every iteration
 
     /**
      * 7. Below is a method that takes in an integer array (similar to a list
@@ -161,16 +175,23 @@ public class Basics {
      * @param arr    An array of integers
      * @return       The sum of all integers at odd indices in arr
      */
-    public static int oddSum(int[] arr) {
-        int current_sum = 0;
+    public static int oddSum(int[] arr){
+            int current_sum = 0;
 
-        /* TODO (Task 5): Complete this method body using a for-loop.
-         *                You can find the length of an array by using the
-         *                .length attribute (e.g. arr.length)
-         *                You can index into arrays as we do in Python
-         *                (e.g. arr[i] gives you the item at index i).
-         */
-
+            /* TODO (Task 5): Complete this method body using a for-loop.
+             *                You can find the length of an array by using the
+             *                .length attribute (e.g. arr.length)
+             *                You can index into arrays as we do in Python
+             *                (e.g. arr[i] gives you the item at index i).
+             */
+            if (arr.length == 0 || arr.length == 1) {
+                return 0;
+            }else {
+                int i;
+                for (i = 0; i < arr.length; i = i + 2) {
+                    current_sum = current_sum + arr[i];
+                }
+        }
         return current_sum;
     }
 
